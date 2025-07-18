@@ -19,7 +19,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@16.176.173.39 << 'EOF'
           cd /var/www/html/CICD
-          git pull origin main
+          sudo git pull origin main
           # Restart Nginx or any other service if needed
           sudo systemctl restart nginx
           EOF
