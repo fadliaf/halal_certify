@@ -17,8 +17,8 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Deploy to ECS
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@16.176.173.39 << 'EOF'
-          cd /var/www/html/CICD
+          ssh -o StrictHostKeyChecking=no ubuntu@13.211.209.15 << 'EOF'
+          cd /var/www/html/halal_certify
           sudo git pull origin main
           # Restart Nginx or any other service if needed
           sudo systemctl restart nginx
